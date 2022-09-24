@@ -62,6 +62,10 @@ header img {
     font-family: josefin sans-bold;
 }
 
+.header h2 {
+    margin-left: -15px;
+}
+
 ul li {
     display: inline-flex;
     justify-content: space-between;
@@ -72,13 +76,11 @@ ul li {
 
 .card-layout {
     justify-self: center;
-    background-color: white;
     position: absolute;
     margin-top: -30px;
     margin-left: 32px;
     width: 70%;
     padding: 10px;
-    border: 1px solid whitesmoke;
     border-radius: 5px;
 }
 
@@ -103,4 +105,28 @@ ul li {
 .task {
     margin-top: -7px;
     position: absolute;
+}
+
+@media screen and (min-width : 376px) and (max-width :425px){
+    header {
+        background-image: url(./images/bg-desktop-light.jpg);
+    }
+    .form input {
+        left: 55px;
+        width: 61%;
+    }
+    .container {
+        width: 80%;
+        margin-left: 15px;
+    }
+    .form button {
+        left: 70px;
+        margin-top: -70px;
+    }
+    input .check-icon {
+        margin-left: -10px;
+    }
+    .header h2 {
+        margin-left: 0px;
+    }
 }

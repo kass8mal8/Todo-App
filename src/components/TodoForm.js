@@ -1,6 +1,8 @@
 import { v4 as uuidv4 } from 'uuid';
-import { useState } from "react";
+import { useState ,useContext } from "react";
 import check from "../images/icon-check.svg"
+import { ThemeContext } from "./App"
+
 
 const TodoForm = ({addTodo}) => {
     const [isSubmitted,setIsSubmitted] = useState(false)
@@ -26,6 +28,14 @@ const TodoForm = ({addTodo}) => {
         }
     }
 
+    const darkTheme = useContext(ThemeContext)
+
+    const themeStyles = {
+        backgroundColor: darkTheme ? 'hsl(234, 11%, 52%)' : 'white',
+        color: darkTheme ? ' hsl(0, 0%, 98%)' : ' hsl(235, 19%, 35%)',
+        border : darkTheme ? '1px solid hsl(234, 11%, 52%)' : 'none',
+    }
+
     const check_style = {
         marginTop:'-7px',
         width:'15px',
@@ -33,11 +43,12 @@ const TodoForm = ({addTodo}) => {
     }
 
     return ( 
-        <form onSubmit={handleSubmit} className = "form">
+        <form onSubmit={handleSubmit} className = "form" >
             <input 
                 type= "text" 
                 onChange={handleInputChange}
-                placeholder = "Type a new todo..."/>
+                placeholder = "Type a new todo..."
+                style={themeStyles}/>
             <button>
                 {isSubmitted ? 
                 <img 
@@ -45,7 +56,7 @@ const TodoForm = ({addTodo}) => {
                 className="check-icon"
                 alt = "close-icon"
                 style={check_style} />
-                : <nav> {""} </nav>
+                : <nav style={themeStyles}> {""} </nav>
                 }
             </button>
         </form>

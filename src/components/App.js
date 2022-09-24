@@ -15,17 +15,16 @@ const App = () => {
     }
 
     const toggleTheme = () => {
-      setDarkTheme(prevDakTheme => !prevDakTheme)
-      alert("hello")
+      setDarkTheme(prevDarkTheme => !prevDarkTheme)
     }
 
 
     return (
-      <ThemeContext.Provider value = {darkTheme}>
+      <ThemeContext.Provider value = {darkTheme} >
         <header>
-            <Header />
+            <Header toggleTheme = {toggleTheme} />
         </header>
-          <TodoForm addTodo={addTodo} toggleTheme = {toggleTheme}/>
+          <TodoForm addTodo={addTodo} />
         <main className="container" >
           <TodoList todos = {todos} setTodos = {setTodos} />
         </main>

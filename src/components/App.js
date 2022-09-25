@@ -1,5 +1,6 @@
 import React,{ useState } from "react";
 import "../style.css"
+import Footer from "./Footer";
 import Header from "./Header";
 import TodoForm from "./TodoForm";
 import TodoList from "./TodoList";
@@ -27,6 +28,7 @@ const App = () => {
           <TodoForm addTodo={addTodo} />
         <main className="container" >
           <TodoList todos = {todos} setTodos = {setTodos} />
+          <Footer />
         </main>
       </ThemeContext.Provider>
     );

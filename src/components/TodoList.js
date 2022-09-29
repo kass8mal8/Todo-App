@@ -6,7 +6,8 @@ import {useContext } from "react"
 const TodoList = ({todos,setTodos}) => {
 
     const handleFilterTodo = (id) => {
-        todos.filter(todo => todo.id !== id)
+        const new_todos = todos.filter(todo => todo.id !== id)
+        setTodos(new_todos)
     }
 
     const darkTheme = useContext(ThemeContext)

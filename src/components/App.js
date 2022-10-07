@@ -9,7 +9,7 @@ export const ThemeContext = React.createContext()
 
 const App = () => {
     const [todos,setTodos] = useState ([])
-    const [darkTheme,setDarkTheme] = useState (true)
+    const [darkTheme,setDarkTheme] = useState (false)
     
     const addTodo = (todo) => {
         setTodos([todo,...todos])

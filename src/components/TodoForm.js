@@ -49,7 +49,7 @@ const TodoForm = ({addTodo}) => {
                 onChange={handleInputChange}
                 placeholder = "Type a new todo..."
                 style={themeStyles}/>
-            <button>
+            <div>
                 {isSubmitted ? 
                 <img 
                 src={check}
@@ -58,7 +58,7 @@ const TodoForm = ({addTodo}) => {
                 style={check_style} />
                 : <nav style={themeStyles}> {""} </nav>
                 }
-            </button>
+            </div>
         </form>
      );
 }

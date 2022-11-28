@@ -26,6 +26,7 @@ const TodoForm = ({addTodo}) => {
             addTodo({...todo,id:uuidv4()})
             setTodo({...todo,task:""})
         }
+        e.target.reset()
     }
 
     const darkTheme = useContext(ThemeContext)
@@ -51,12 +52,14 @@ const TodoForm = ({addTodo}) => {
                 style={themeStyles}/>
             <div>
                 {isSubmitted ? 
-                <img 
-                src={check}
-                className="check-icon"
-                alt = "close-icon"
-                style={check_style} />
-                : <nav style={themeStyles}> {""} </nav>
+                    <img 
+                    src={check}
+                    className="check-icon"
+                    alt = "close-icon"
+                    style={check_style} />
+                : <nav 
+                    style={themeStyles}> {""}
+                  </nav>
                 }
             </div>
         </form>

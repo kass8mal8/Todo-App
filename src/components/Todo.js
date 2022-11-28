@@ -3,7 +3,7 @@ import check from "../images/icon-check.svg"
 import { useState } from "react"
 
 
-const Todo = ({todo,handleFilterTodo}) => {
+const Todo = ({todo, handleFilterTodo}) => {
 
     const [isCompleted,setIsCompleted] = useState (false)
 
@@ -19,13 +19,18 @@ const Todo = ({todo,handleFilterTodo}) => {
         borderBottom :'1px solid hsl(236, 33%, 92%)'
     }
 
-    const handleCompleted = () => {
-        setIsCompleted(true)
-    }
+    const handleCompleted = () => { setIsCompleted(true) }
   
     return ( 
         <div style={todoStyles} >
-            <li><img src={check} alt = "check-icon" className="check-icon"/></li>
+            {isCompleted && 
+                <li>
+                    <img 
+                        src={check} 
+                        alt = "check-icon" 
+                        className="check-icon"/>
+                </li>
+            }
             <li 
                 className="task" 
                 onClick={handleCompleted}

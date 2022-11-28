@@ -1,6 +1,5 @@
 import React,{ useState } from "react";
 import "../style.css"
-import Footer from "./Footer";
 import Header from "./Header";
 import TodoForm from "./TodoForm";
 import TodoList from "./TodoList";
@@ -22,14 +21,11 @@ const App = () => {
 
     return (
       <ThemeContext.Provider value = {darkTheme} >
-        <header>
-            <Header toggleTheme = {toggleTheme} />
-        </header>
+          <Header toggleTheme = {toggleTheme} />
           <TodoForm addTodo={addTodo} />
-        <main className="container" >
-          <TodoList todos = {todos} setTodos = {setTodos} />
-          <Footer />
-        </main>
+          <main className="container" >
+            <TodoList todos = {todos} setTodos = {setTodos} />
+          </main>
       </ThemeContext.Provider>
     );
   }

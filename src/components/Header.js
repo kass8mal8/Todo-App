@@ -6,8 +6,15 @@ const Header = ({toggleTheme}) => {
     return ( 
         <div  className="header" >
             <ul>
-                <li> <h2>TODO </h2> </li>
-                <li> <img src={moon} alt = "dark-mode" onClick={toggleTheme}/> </li>
+                <li> 
+                    <h2>TODO </h2> 
+                </li>
+                <li> 
+                    <img 
+                        src={moon} 
+                        alt = "dark-mode" 
+                        onClick={toggleTheme}/> 
+                    </li>
             </ul>
         </div>
      );

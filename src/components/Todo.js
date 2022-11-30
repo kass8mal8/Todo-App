@@ -16,13 +16,14 @@ const Todo = ({todo, handleFilterTodo}) => {
         marginTop:'25px',
         justifyContent:'center',
         alignItems:'center',
+        position:'relative',
         borderBottom :'1px solid hsl(236, 33%, 92%)'
     }
 
     const handleCompleted = () => { setIsCompleted(true) }
   
     return ( 
-        <div style={todoStyles} >
+        <div style={todoStyles} className = "todo-content" >
             {isCompleted && 
                 <li>
                     <img 
@@ -37,11 +38,13 @@ const Todo = ({todo, handleFilterTodo}) => {
                 style = {completeStyles}>
                 {todo.task} 
             </li>
-            <li><img 
-                src={cross}
-                alt = "close-icon" 
-                className="close-icon"
-                onClick={() => handleFilterTodo(todo.id)}/></li>
+            <li>
+                <img 
+                    src={cross}
+                    alt = "close-icon" 
+                    className="close-icon"
+                    onClick={() => handleFilterTodo(todo.id)}/>
+            </li>
         </div>
      );
 }

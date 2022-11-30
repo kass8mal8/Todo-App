@@ -1,4 +1,5 @@
 import moon from "../images/icon-moon.svg"
+// import sun from "../images/icon-sun.svg"
 
 const Header = ({toggleTheme}) => {
     
@@ -10,8 +11,8 @@ const Header = ({toggleTheme}) => {
                     <h2>TODO </h2> 
                 </li>
                 <li> 
-                    <img 
-                        src={moon} 
+                    <img
+                        src={moon}  
                         alt = "dark-mode" 
                         onClick={toggleTheme}/> 
                     </li>

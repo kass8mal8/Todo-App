@@ -1,5 +1,6 @@
 import moon from "../images/icon-moon.svg"
 // import sun from "../images/icon-sun.svg"
+import '../styles/header.css'
 
 const Header = ({toggleTheme}) => {
     

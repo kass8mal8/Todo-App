@@ -1,0 +1,42 @@
+.form input {
+    padding:15px;
+    font-size: 17px;
+    outline: none;
+    font-family: josefin sans;
+    padding-left: 50px;
+    margin-top: -77px;
+    position: absolute;
+    left: 40px;
+    color: hsl(0, 0%, 98%);
+    width: 60%;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+
+::placeholder{
+    color: hsl(0, 3%, 81%);
+}
+
+.form div {
+    padding: 2px;
+    border: 1px solid  hsl(0, 11%, 95%);
+    border-radius: 50px;
+    width: 10px;height: 8px;
+    position: absolute;
+    left: 57px;margin-top: -58px;
+}
+
+@media screen and (min-width:800px) {
+    .form input{
+        width: 49.7%;
+        margin-left: 18%;
+    }
+    .form div {
+        left: 22%;
+        
+        width: 9px;
+    }
+    input .check-icon {
+        margin-left: -10px;
+    }
+}

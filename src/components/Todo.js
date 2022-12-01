@@ -1,6 +1,8 @@
 import cross from "../images/icon-cross.svg"
 import check from "../images/icon-check.svg"
-import { useState } from "react"
+import { useState, useContext } from "react"
+import '../styles/todo.css'
+import { ThemeContext } from "./App"
 
 
 const Todo = ({todo, handleFilterTodo}) => {
@@ -8,22 +10,17 @@ const Todo = ({todo, handleFilterTodo}) => {
     const [isCompleted,setIsCompleted] = useState (false)
 
     const completeStyles = {
-        textDecoration:isCompleted ? 'line-through' : 'none',
+        textDecoration: isCompleted ? 'line-through' : 'none',
         color:'#ccc'
     }
 
-    const todoStyles = {
-        marginTop:'25px',
-        justifyContent:'center',
-        alignItems:'center',
-        position:'relative',
-        borderBottom :'1px solid hsl(236, 33%, 92%)'
-    }
+    const darkTheme = useContext(ThemeContext)
+    const themeStyles = { color: darkTheme ? ' hsl(0, 3%, 81%)' : ' hsl(235, 19%, 35%)', }
 
     const handleCompleted = () => { setIsCompleted(true) }
   
     return ( 
-        <div style={todoStyles} className = "todo-content" >
+        <div className = "todo-content" style={themeStyles}>
             {isCompleted && 
                 <li>
                     <img 
@@ -35,8 +32,7 @@ const Todo = ({todo, handleFilterTodo}) => {
             <li 
                 className="task" 
                 onClick={handleCompleted}
-                style = {completeStyles}>
-                {todo.task} 
+                style = {completeStyles}> {todo.task} 
             </li>
             <li>
                 <img 

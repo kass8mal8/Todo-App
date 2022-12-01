@@ -2,13 +2,14 @@ import { v4 as uuidv4 } from 'uuid';
 import { useState ,useContext } from "react";
 import check from "../images/icon-check.svg"
 import { ThemeContext } from "./App"
+import '../styles/form.css'
 
 
 const TodoForm = ({addTodo}) => {
     const [isSubmitted,setIsSubmitted] = useState(false)
 
     const [todo,setTodo] = useState ({
-        task : ' ',
+        task : '',
         id : ' ',
         completed : false
     })
@@ -33,7 +34,7 @@ const TodoForm = ({addTodo}) => {
 
     const themeStyles = {
         backgroundColor: darkTheme ? 'hsl(234, 11%, 52%)' : 'white',
-        color: darkTheme ? ' hsl(0, 0%, 98%)' : ' hsl(235, 19%, 35%)',
+        color: darkTheme ? ' hsl(0, 3%, 81%)' : ' hsl(235, 19%, 35%)',
         border : darkTheme ? '1px solid hsl(234, 11%, 52%)' : 'none',
     }
 

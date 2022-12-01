@@ -1,0 +1,38 @@
+.header {
+    background-image: url(../images/bg-mobile-light.jpg);
+    background-repeat: repeat;
+    width: 94%;
+    padding: 20px;
+    padding-bottom: 60px;
+    margin-left: -8px;
+    margin-top: -18px;
+    color: hsl(0, 11%, 95%);
+    letter-spacing: 5px;
+    font-weight: bolder;
+    font-family: josefin sans-bold;
+}
+
+.header img {
+    position: absolute;
+    right: 50px;
+    cursor: pointer;
+}
+
+.header h2 {
+    margin-left: -15px;
+}
+
+@media screen and (min-width:800px) {
+    .header {
+        background-image: url(../images/bg-desktop-light.jpg);
+        margin-left: -8px;
+        width: 97vw;
+    }
+    .header h2 {
+        margin-left: 225px;
+    }
+    .header img {
+        right: 26%;
+    }
+
+}

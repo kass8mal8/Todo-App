@@ -1,0 +1,26 @@
+.check-icon {
+    border-radius: 50%;
+    padding: 3px;
+    background-position: cover;
+    left: -40px;
+    background-image: linear-gradient(to right,hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+}
+
+.close-icon {
+    right: 15px;
+    cursor: pointer;
+}
+
+.todo-content{
+    margin-top: 25px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-bottom: 1px solid hsl(236, 33%, 92%);
+    color: hsl(235, 19%, 35%);
+}
+
+.task {
+    margin-top: -7px;
+    position: absolute;
+}

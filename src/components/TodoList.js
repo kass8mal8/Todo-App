@@ -3,6 +3,7 @@ import Todo from "./Todo";
 import { ThemeContext } from "./App";
 import {useContext } from "react"
 import Footer from "./Footer";
+import '../styles/todo-list.css'
 
 const TodoList = ({todos,setTodos}) => {
 
@@ -18,7 +19,6 @@ const TodoList = ({todos,setTodos}) => {
         color: darkTheme ? ' hsl(235, 19%, 35%)' : ' hsl(0, 0%, 98%)',
         border : darkTheme ? '1px solid hsl(234, 11%, 52%)' : 'none',
         marginTop:'-25px'
-        
     }
     
     
@@ -37,7 +37,11 @@ const TodoList = ({todos,setTodos}) => {
                 </ul>
 
                 <nav>
-                    <li> {todos.length} items left </li>
+                    {todos.length > 0 ? <li> 
+                        {todos.length} items left 
+                    </li> :
+                    <li>No items left</li>
+                    }
                     <li>Clear completed</li>
                 </nav>
             </div>

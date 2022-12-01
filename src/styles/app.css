@@ -1,0 +1,31 @@
+@font-face {
+    font-family: josefin sans-bold;
+    src: url(../font/JosefinSans-Bold.ttf);
+}
+
+@font-face {
+    font-family: josefin sans;
+    src: url(../font/JosefinSans-Medium.ttf);
+}
+
+body {
+    font-family: josefin sans;
+    background:hsl(0, 1%, 86%);
+    color: hsl(235, 19%, 35%);
+}
+
+ul li {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    margin: 10px auto;
+}
+
+@media screen  and (min-width:800px) {
+    .container{
+        width: 90%;
+        margin: auto 50px;
+    }
+
+}

@@ -17,7 +17,10 @@ const Todo = ({todo, handleFilterTodo}) => {
     const darkTheme = useContext(ThemeContext)
     const themeStyles = { color: darkTheme ? ' hsl(0, 3%, 81%)' : ' hsl(235, 19%, 35%)', }
 
-    const handleCompleted = () => { setIsCompleted(true) }
+    const handleCompleted = () => { 
+        setIsCompleted({...todo,completed:true}) 
+        console.log(todo.completed);
+    }
   
     return ( 
         <div className = "todo-content" style={themeStyles}>

@@ -9,7 +9,7 @@ const TodoForm = ({addTodo}) => {
     const [isSubmitted,setIsSubmitted] = useState(false)
 
     const [todo,setTodo] = useState ({
-        task : '',
+        task : ' ',
         id : ' ',
         completed : false
     })

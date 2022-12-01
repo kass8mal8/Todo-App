@@ -1,7 +1,7 @@
 .card-layout {
     justify-self: center;
     position: relative;
-    margin-top:5%;
+    margin-top:10%;
     margin-left: 33px;
     width: 72.3%;
     padding: 15px;
@@ -28,7 +28,7 @@
     .card-layout {
         margin-left: 18.7%;
         width: 58.8%;
-        margin-top: 30px;
+        margin-top: 15%;
     }
     .card-layout nav{
         list-style : none;

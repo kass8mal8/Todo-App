@@ -49,7 +49,7 @@ const TodoForm = ({addTodo}) => {
             <input 
                 type= "text" 
                 onChange={handleInputChange}
-                placeholder = "Type a new todo..."
+                placeholder = "Create a new todo..."
                 style={themeStyles}/>
             <div>
                 {isSubmitted ? 

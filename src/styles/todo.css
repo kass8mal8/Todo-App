@@ -7,7 +7,7 @@
 }
 
 .close-icon {
-    right: 15px;
+    right: 0px;
     cursor: pointer;
 }
 
@@ -17,6 +17,7 @@
     align-items: center;
     position: relative;
     border-bottom: 1px solid hsl(236, 33%, 92%);
+    padding-block: 5px;
     color: hsl(235, 19%, 35%);
 }
 
